@@ -1,0 +1,35 @@
+<h1>pcb-drill</h1>
+
+<p>pcb-drill is a software that allows you to drill the holes in your pcb from underneath while aiming with a webcam.</p>
+
+<h1>Setup</h1>
+
+<h2>The microcontroller part</h2>
+
+<p>In my setup the microcontroller is a Arduino Mega2560. It controls a stepper motor that uses an eccentric tappet to lift and lower the drill.
+Whenever a byte is sent to the Arduino using the USB serial connection, one full turn will be done. The value of this byte doesn't matter.
+If your setup is differnent to mine, you can easily modify the code. The only important thing is that when the byte is received, a full turn will be performed.</p>
+
+<h2>The webcam GUI</h2>
+
+<p>The webcam GUI is written in Python and uses OpenCV for displaying the camera image and overlaying the crosshair.</p>
+
+<h1>How to use</h1>
+
+<ol>
+<li><p>Connect the USB Webcam to your computer as well as the Arduino.</p></li>
+<li><p>Turn the drill on.</p></li>
+<li><p>Start drill-eye</p></li>
+<li><p>Place a offcut of pcb under the camera and hold it.</p></li>
+<li><p>Push the spacebar. Now the drill should lift and lower one time and drill a hole into the pcb.</p></li>
+<li><p>Adjust the position, size and shape of the crosshair to fit your hole.</p></li>
+<li><p>Drill your real pcb now.</p></li>
+</ol>
+
+<h1>Keys</h1>
+
+<ul>
+<li><p><code>Esc</code> quits the drill-eye software.</p></li>
+<li><p><code>Space</code> starts a drill cycle.</p></li>
+<li><p><code>&amp;uarr;</code> <code>\↑</code> &uarr; \↑</p></li>
+</ul>
